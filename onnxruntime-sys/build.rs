@@ -55,6 +55,7 @@ fn main() {
 
     println!("cargo:rerun-if-env-changed={}", ORT_ENV_STRATEGY);
     println!("cargo:rerun-if-env-changed={}", ORT_ENV_GPU);
+    println!("cargo:rerun-if-env-changed={}", ORT_VERSION);
     println!("cargo:rerun-if-env-changed={}", ORT_ENV_SYSTEM_LIB_LOCATION);
 
     generate_bindings(&include_dir);
