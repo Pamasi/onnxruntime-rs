@@ -22,7 +22,7 @@ pub enum ImageClassification {
     /// > contains images from 1000 classes. MobileNet models are also very efficient in terms of speed and
     /// > size and hence are ideal for embedded and mobile applications.
     ///
-    /// Source: [https://github.com/onnx/models/tree/master/vision/classification/mobilenet](https://github.com/onnx/models/tree/master/vision/classification/mobilenet)
+    /// Source: [https://github.com/onnx/models/tree/main/vision/classification/mobilenet](https://github.com/onnx/models/tree/main/vision/classification/mobilenet)
     ///
     /// Variant downloaded: ONNX Version 1.2.1 with Opset Version 7.
     MobileNet,
@@ -31,7 +31,7 @@ pub enum ImageClassification {
     /// > ResNet models provide very high accuracies with affordable model sizes. They are ideal for cases when
     /// > high accuracy of classification is required.
     ///
-    /// Source: [https://github.com/onnx/models/tree/master/vision/classification/resnet](https://github.com/onnx/models/tree/master/vision/classification/resnet)
+    /// Source: [https://github.com/onnx/models/tree/main/vision/classification/resnet](https://github.com/onnx/models/tree/main/vision/classification/resnet)
     ResNet(ResNet),
     /// A small CNN with AlexNet level accuracy on ImageNet with 50x fewer parameters.
     ///
@@ -40,7 +40,7 @@ pub enum ImageClassification {
     /// > export a new model from the cloud to an autonomous car and more feasible to deploy on FPGAs and other
     /// > hardware with limited memory.
     ///
-    /// Source: [https://github.com/onnx/models/tree/master/vision/classification/squeezenet](https://github.com/onnx/models/tree/master/vision/classification/squeezenet)
+    /// Source: [https://github.com/onnx/models/tree/main/vision/classification/squeezenet](https://github.com/onnx/models/tree/main/vision/classification/squeezenet)
     ///
     /// Variant downloaded: SqueezeNet v1.1, ONNX Version 1.2.1 with Opset Version 7.
     SqueezeNet,
@@ -49,23 +49,23 @@ pub enum ImageClassification {
     /// > VGG models provide very high accuracies but at the cost of increased model sizes. They are ideal for
     /// > cases when high accuracy of classification is essential and there are limited constraints on model sizes.
     ///
-    /// Source: [https://github.com/onnx/models/tree/master/vision/classification/vgg](https://github.com/onnx/models/tree/master/vision/classification/vgg)
+    /// Source: [https://github.com/onnx/models/tree/main/vision/classification/vgg](https://github.com/onnx/models/tree/main/vision/classification/vgg)
     Vgg(Vgg),
     /// Convolutional neural network for classification, which competed in the ImageNet Large Scale Visual Recognition Challenge in 2012.
     ///
-    /// Source: [https://github.com/onnx/models/tree/master/vision/classification/alexnet](https://github.com/onnx/models/tree/master/vision/classification/alexnet)
+    /// Source: [https://github.com/onnx/models/tree/main/vision/classification/alexnet](https://github.com/onnx/models/tree/main/vision/classification/alexnet)
     ///
     /// Variant downloaded: ONNX Version 1.4 with Opset Version 9.
     AlexNet,
     /// Convolutional neural network for classification, which competed in the ImageNet Large Scale Visual Recognition Challenge in 2014.
     ///
-    /// Source: [https://github.com/onnx/models/tree/master/vision/classification/inception_and_googlenet/googlenet](https://github.com/onnx/models/tree/master/vision/classification/inception_and_googlenet/googlenet)
+    /// Source: [https://github.com/onnx/models/tree/main/vision/classification/inception_and_googlenet/googlenet](https://github.com/onnx/models/tree/main/vision/classification/inception_and_googlenet/googlenet)
     ///
     /// Variant downloaded: ONNX Version 1.4 with Opset Version 9.
     GoogleNet,
     /// Variant of AlexNet, it's the name of a convolutional neural network for classification, which competed in the ImageNet Large Scale Visual Recognition Challenge in 2012.
     ///
-    /// Source: [https://github.com/onnx/models/tree/master/vision/classification/caffenet](https://github.com/onnx/models/tree/master/vision/classification/caffenet)
+    /// Source: [https://github.com/onnx/models/tree/main/vision/classification/caffenet](https://github.com/onnx/models/tree/main/vision/classification/caffenet)
     ///
     /// Variant downloaded: ONNX Version 1.4 with Opset Version 9.
     CaffeNet,
@@ -73,13 +73,13 @@ pub enum ImageClassification {
     ///
     /// > This model was made by transplanting the R-CNN SVM classifiers into a fc-rcnn classification layer.
     ///
-    /// Source: [https://github.com/onnx/models/tree/master/vision/classification/rcnn_ilsvrc13](https://github.com/onnx/models/tree/master/vision/classification/rcnn_ilsvrc13)
+    /// Source: [https://github.com/onnx/models/tree/main/vision/classification/rcnn_ilsvrc13](https://github.com/onnx/models/tree/main/vision/classification/rcnn_ilsvrc13)
     ///
     /// Variant downloaded: ONNX Version 1.4 with Opset Version 9.
     RcnnIlsvrc13,
     /// Convolutional neural network for classification.
     ///
-    /// Source: [https://github.com/onnx/models/tree/master/vision/classification/rcnn_ilsvrc13](https://github.com/onnx/models/tree/master/vision/classification/rcnn_ilsvrc13)
+    /// Source: [https://github.com/onnx/models/tree/main/vision/classification/rcnn_ilsvrc13](https://github.com/onnx/models/tree/main/vision/classification/rcnn_ilsvrc13)
     ///
     /// Variant downloaded: ONNX Version 1.4 with Opset Version 9.
     DenseNet121,
@@ -87,19 +87,19 @@ pub enum ImageClassification {
     Inception(InceptionVersion),
     /// Computationally efficient CNN architecture designed specifically for mobile devices with very limited computing power.
     ///
-    /// Source: [https://github.com/onnx/models/tree/master/vision/classification/shufflenet](https://github.com/onnx/models/tree/master/vision/classification/shufflenet)
+    /// Source: [https://github.com/onnx/models/tree/main/vision/classification/shufflenet](https://github.com/onnx/models/tree/main/vision/classification/shufflenet)
     ShuffleNet(ShuffleNetVersion),
     /// Deep convolutional networks for classification.
     ///
     /// > This model's 4th layer has 512 maps instead of 1024 maps mentioned in the paper.
     ///
-    /// Source: [https://github.com/onnx/models/tree/master/vision/classification/zfnet-512](https://github.com/onnx/models/tree/master/vision/classification/zfnet-512)
+    /// Source: [https://github.com/onnx/models/tree/main/vision/classification/zfnet-512](https://github.com/onnx/models/tree/main/vision/classification/zfnet-512)
     ZFNet512,
     /// Image classification model that achieves state-of-the-art accuracy.
     ///
     /// >  It is designed to run on mobile CPU, GPU, and EdgeTPU devices, allowing for applications on mobile and loT, where computational resources are limited.
     ///
-    /// Source: [https://github.com/onnx/models/tree/master/vision/classification/efficientnet-lite4](https://github.com/onnx/models/tree/master/vision/classification/efficientnet-lite4)
+    /// Source: [https://github.com/onnx/models/tree/main/vision/classification/efficientnet-lite4](https://github.com/onnx/models/tree/main/vision/classification/efficientnet-lite4)
     ///
     /// Variant downloaded: ONNX Version 1.7.0 with Opset Version 11.
     EfficientNetLite4,
@@ -110,13 +110,13 @@ pub enum ImageClassification {
 pub enum InceptionVersion {
     /// Google's Inception v1
     ///
-    /// Source: [https://github.com/onnx/models/tree/master/vision/classification/inception_and_googlenet/inception_v1](https://github.com/onnx/models/tree/master/vision/classification/inception_and_googlenet/inception_v1)
+    /// Source: [https://github.com/onnx/models/tree/main/vision/classification/inception_and_googlenet/inception_v1](https://github.com/onnx/models/tree/main/vision/classification/inception_and_googlenet/inception_v1)
     ///
     /// Variant downloaded: ONNX Version 1.4 with Opset Version 9.
     V1,
     /// Google's Inception v2
     ///
-    /// Source: [https://github.com/onnx/models/tree/master/vision/classification/inception_and_googlenet/inception_v2](https://github.com/onnx/models/tree/master/vision/classification/inception_and_googlenet/inception_v2)
+    /// Source: [https://github.com/onnx/models/tree/main/vision/classification/inception_and_googlenet/inception_v2](https://github.com/onnx/models/tree/main/vision/classification/inception_and_googlenet/inception_v2)
     ///
     /// Variant downloaded: ONNX Version 1.4 with Opset Version 9.
     V2,
@@ -124,7 +124,7 @@ pub enum InceptionVersion {
 
 /// ResNet
 ///
-/// Source: [https://github.com/onnx/models/tree/master/vision/classification/resnet](https://github.com/onnx/models/tree/master/vision/classification/resnet)
+/// Source: [https://github.com/onnx/models/tree/main/vision/classification/resnet](https://github.com/onnx/models/tree/main/vision/classification/resnet)
 #[derive(Debug, Clone)]
 pub enum ResNet {
     /// ResNet v1
@@ -134,7 +134,7 @@ pub enum ResNet {
 }
 /// ResNet v1
 ///
-/// Source: [https://github.com/onnx/models/tree/master/vision/classification/resnet](https://github.com/onnx/models/tree/master/vision/classification/resnet)
+/// Source: [https://github.com/onnx/models/tree/main/vision/classification/resnet](https://github.com/onnx/models/tree/main/vision/classification/resnet)
 #[derive(Debug, Clone)]
 pub enum ResNetV1 {
     /// ResNet18
@@ -160,7 +160,7 @@ pub enum ResNetV1 {
 }
 /// ResNet v2
 ///
-/// Source: [https://github.com/onnx/models/tree/master/vision/classification/resnet](https://github.com/onnx/models/tree/master/vision/classification/resnet)
+/// Source: [https://github.com/onnx/models/tree/main/vision/classification/resnet](https://github.com/onnx/models/tree/main/vision/classification/resnet)
 #[derive(Debug, Clone)]
 pub enum ResNetV2 {
     /// ResNet18
@@ -187,7 +187,7 @@ pub enum ResNetV2 {
 
 /// ResNet
 ///
-/// Source: [https://github.com/onnx/models/tree/master/vision/classification/resnet](https://github.com/onnx/models/tree/master/vision/classification/resnet)
+/// Source: [https://github.com/onnx/models/tree/main/vision/classification/resnet](https://github.com/onnx/models/tree/main/vision/classification/resnet)
 #[derive(Debug, Clone)]
 pub enum Vgg {
     /// VGG with 16 convolutional layers
@@ -214,16 +214,16 @@ pub enum Vgg {
 
 /// Computationally efficient CNN architecture designed specifically for mobile devices with very limited computing power.
 ///
-/// Source: [https://github.com/onnx/models/tree/master/vision/classification/shufflenet](https://github.com/onnx/models/tree/master/vision/classification/shufflenet)
+/// Source: [https://github.com/onnx/models/tree/main/vision/classification/shufflenet](https://github.com/onnx/models/tree/main/vision/classification/shufflenet)
 #[derive(Debug, Clone)]
 pub enum ShuffleNetVersion {
-    /// Source: [https://github.com/onnx/models/tree/master/vision/classification/shufflenet](https://github.com/onnx/models/tree/master/vision/classification/shufflenet)
+    /// Source: [https://github.com/onnx/models/tree/main/vision/classification/shufflenet](https://github.com/onnx/models/tree/main/vision/classification/shufflenet)
     ///
     /// Variant downloaded: ONNX Version 1.4 with Opset Version 9.
     V1,
     /// ShuffleNetV2 is an improved architecture that is the state-of-the-art in terms of speed and accuracy tradeoff used for image classification.
     ///
-    /// Source: [https://github.com/onnx/models/tree/master/vision/classification/shufflenet](https://github.com/onnx/models/tree/master/vision/classification/shufflenet)
+    /// Source: [https://github.com/onnx/models/tree/main/vision/classification/shufflenet](https://github.com/onnx/models/tree/main/vision/classification/shufflenet)
     ///
     /// Variant downloaded: ONNX Version 1.6 with Opset Version 10.
     V2,

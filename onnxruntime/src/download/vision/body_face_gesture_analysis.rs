@@ -15,13 +15,13 @@ pub enum BodyFaceGestureAnalysis {
     /// A CNN based model for face recognition which learns discriminative features of faces and produces
     /// embeddings for input face images.
     ///
-    /// Source: [https://github.com/onnx/models/tree/master/vision/body_analysis/arcface](https://github.com/onnx/models/tree/master/vision/body_analysis/arcface)
+    /// Source: [https://github.com/onnx/models/tree/main/vision/body_analysis/arcface](https://github.com/onnx/models/tree/main/vision/body_analysis/arcface)
     ///
     /// Variant downloaded: ONNX Version 1.3 with Opset Version 8.
     ArcFace,
     /// Deep CNN for emotion recognition trained on images of faces.
     ///
-    /// Source: [https://github.com/onnx/models/tree/master/vision/body_analysis/emotion_ferplus](https://github.com/onnx/models/tree/master/vision/body_analysis/emotion_ferplus)
+    /// Source: [https://github.com/onnx/models/tree/main/vision/body_analysis/emotion_ferplus](https://github.com/onnx/models/tree/main/vision/body_analysis/emotion_ferplus)
     ///
     /// Variant downloaded: ONNX Version 1.3 with Opset Version 8.
     EmotionFerPlus,

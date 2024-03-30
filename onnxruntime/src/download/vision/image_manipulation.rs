@@ -17,7 +17,7 @@ pub enum ImageManipulation {
     /// > The Super Resolution machine learning model sharpens and upscales the input image to refine the
     /// > details and improve quality.
     ///
-    /// Source: [https://github.com/onnx/models/tree/master/vision/super_resolution/sub_pixel_cnn_2016](https://github.com/onnx/models/tree/master/vision/super_resolution/sub_pixel_cnn_2016)
+    /// Source: [https://github.com/onnx/models/tree/main/vision/super_resolution/sub_pixel_cnn_2016](https://github.com/onnx/models/tree/main/vision/super_resolution/sub_pixel_cnn_2016)
     ///
     /// Variant downloaded: ONNX Version 1.5 with Opset Version 10.
     SuperResolution,
@@ -27,13 +27,13 @@ pub enum ImageManipulation {
     /// > Examples of the styles can be seen
     /// > [in this PyTorch example](https://github.com/pytorch/examples/tree/master/fast_neural_style#models).
     ///
-    /// Source: [https://github.com/onnx/models/tree/master/vision/style_transfer/fast_neural_style](https://github.com/onnx/models/tree/master/vision/style_transfer/fast_neural_style)
+    /// Source: [https://github.com/onnx/models/tree/main/vision/style_transfer/fast_neural_style](https://github.com/onnx/models/tree/main/vision/style_transfer/fast_neural_style)
     FastNeuralStyleTransfer(FastNeuralStyleTransferStyle),
 }
 
 /// Fast Neural Style Transfer Style
 ///
-/// Source: [https://github.com/onnx/models/tree/master/vision/style_transfer/fast_neural_style](https://github.com/onnx/models/tree/master/vision/style_transfer/fast_neural_style)
+/// Source: [https://github.com/onnx/models/tree/main/vision/style_transfer/fast_neural_style](https://github.com/onnx/models/tree/main/vision/style_transfer/fast_neural_style)
 ///
 /// Variant downloaded: ONNX Version 1.4 with Opset Version 9.
 #[derive(Debug, Clone)]

@@ -58,7 +58,7 @@ fn main() {
     //       https://github.com/onnx/models/blob/master/vision/classification/squeezenet/model/squeezenet1.0-8.onnx)
     //       Download it:
     //           curl -LO "https://github.com/onnx/models/raw/master/vision/classification/squeezenet/model/squeezenet1.0-8.onnx"
-    //       Reference: https://github.com/onnx/models/tree/master/vision/classification/squeezenet#model
+    //       Reference: https://github.com/onnx/models/tree/main/vision/classification/squeezenet#model
     let model_path = std::ffi::OsString::from("squeezenet1.0-8.onnx");
 
     #[cfg(target_family = "windows")]
