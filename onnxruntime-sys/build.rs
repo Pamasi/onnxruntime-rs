@@ -8,12 +8,14 @@ use std::{
     str::FromStr,
 };
 
+#[cfg(feature = "generate-bindings")]
+use bindgen::Formatter;
 /// ONNX Runtime version
 ///
 /// WARNING: If version is changed, bindings for all platforms will have to be re-generated.
 ///          To do so, run this:
 ///              cargo build --package onnxruntime-sys --features generate-bindings
-const ORT_VERSION: &str = "1.8.1";
+const ORT_VERSION: &str = "ORT_VERSION";
 
 /// Base Url from which to download pre-built releases/
 const ORT_RELEASE_BASE_URL: &str = "https://github.com/microsoft/onnxruntime/releases/download";
@@ -109,13 +111,14 @@ fn generate_bindings(include_dir: &Path) {
         // Set `size_t` to be translated to `usize` for win32 compatibility.
         .size_t_is_usize(true)
         // Format using rustfmt
-        .rustfmt_bindings(true)
+        .formatter(Formatter::Rustfmt)
         .rustified_enum("*")
         // Finish the builder and generate the bindings.
         .generate()
         // Unwrap the Result and panic on failure.
         .expect("Unable to generate bindings");
 
+    println!("HELP");
     // Write the bindings to (source controlled) src/generated/<os>/<arch>/bindings.rs
     let generated_file = PathBuf::from(env::var("CARGO_MANIFEST_DIR").unwrap())
         .join("src")
@@ -178,7 +181,7 @@ fn extract_zip(filename: &Path, outpath: &Path) {
         let mut file = archive.by_index(i).unwrap();
         #[allow(deprecated)]
         let outpath = outpath.join(file.sanitized_name());
-        if !(&*file.name()).ends_with('/') {
+        if !file.name().ends_with('/') {
             println!(
                 "File {} extracted to \"{}\" ({} bytes)",
                 i,
@@ -365,15 +368,19 @@ fn prebuilt_archive_url() -> (PathBuf, String) {
         accelerator: env::var(ORT_ENV_GPU).unwrap_or_default().parse().unwrap(),
     };
 
+    let ort_version = env::var(ORT_VERSION).unwrap_or_else(|_| "unknown".to_string());
+
+    println!("ONNX version used is {}", ort_version);
+
     let prebuilt_archive = format!(
         "onnxruntime-{}-{}.{}",
         triplet.as_onnx_str(),
-        ORT_VERSION,
+        ort_version,
         triplet.os.archive_extension()
     );
     let prebuilt_url = format!(
         "{}/v{}/{}",
-        ORT_RELEASE_BASE_URL, ORT_VERSION, prebuilt_archive
+        ORT_RELEASE_BASE_URL, ort_version, prebuilt_archive
     );
 
     (PathBuf::from(prebuilt_archive), prebuilt_url)

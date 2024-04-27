@@ -7,7 +7,7 @@
 [![codecov](https://codecov.io/gh/nbigaouette/onnxruntime-rs/branch/master/graph/badge.svg)](https://codecov.io/gh/nbigaouette/onnxruntime-rs)
 
 This is an attempt at a Rust wrapper for
-[Microsoft's ONNX Runtime](https://github.com/microsoft/onnxruntime) (version 1.8).
+[Microsoft's ONNX Runtime](https://github.com/microsoft/onnxruntime) .
 
 This project consist on two crates:
 
@@ -32,10 +32,13 @@ GPU:
 * Linux x86_64
 * Windows x86_64
 
+
+
 ---
 
 **WARNING**:
-
+* The ONNX Runtime version must specified through the ORT_VERSION enviroment variable, i.e. ORT_VERSION=1.13.1 
+* This repos has been updated to support only ONNX runtime version >= 1.13.
 * This is an experiment and work in progress; it is _not_ complete/working/safe. Help welcome!
 * Basic inference works, see [`onnxruntime/examples/sample.rs`](onnxruntime/examples/sample.rs) or [`onnxruntime/tests/integration_tests.rs`](onnxruntime/tests/integration_tests.rs)
 * ONNX Runtime has many options to control the inference process but those options are not yet exposed.

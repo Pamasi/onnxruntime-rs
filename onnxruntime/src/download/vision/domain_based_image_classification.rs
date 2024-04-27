@@ -9,7 +9,7 @@ use crate::download::{vision::Vision, AvailableOnnxModel, ModelUrl};
 pub enum DomainBasedImageClassification {
     /// Handwritten digits prediction using CNN
     ///
-    /// Source: [https://github.com/onnx/models/tree/master/vision/classification/mnist](https://github.com/onnx/models/tree/master/vision/classification/mnist)
+    /// Source: [https://github.com/onnx/models/tree/main/vision/classification/mnist](https://github.com/onnx/models/tree/main/vision/classification/mnist)
     ///
     /// Variant downloaded: ONNX Version 1.3 with Opset Version 8.
     Mnist,
